@@ -30,7 +30,8 @@ function getConfig({ input, dest, format, uglified = true, transpiled = false, b
 }
 
 const config = [
-  getConfig({ input: './src/index.js', dest: 'index.umd.js', format: 'umd' })
+  getConfig({ input: './src/index.js', dest: 'index.umd.js', format: 'umd' }),
+  getConfig({ input: './src/index.js', dest: 'index.es5.js', format: 'iife', transpiled: true })
 ];
 
 export default config;

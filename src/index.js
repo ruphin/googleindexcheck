@@ -1,4 +1,4 @@
-const executedText = document.createTextNode("SCRIPT EXECUTED");
+const executedText = document.createTextNode('SCRIPT EXECUTED');
 document.body.appendChild(executedText);
 
 const content = `
@@ -9,8 +9,7 @@ const content = `
   }
 </style>
 <p>THIS SHOULD RENDER</p>
-`
-
+`;
 
 class MyApp extends HTMLElement {
   connectedCallback() {
@@ -20,4 +19,3 @@ class MyApp extends HTMLElement {
 }
 
 customElements.define('my-app', MyApp);
-
