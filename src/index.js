@@ -1,6 +1,8 @@
 const content = `
 <style>
   p {
+    background: white;
+    color: black;
     font-weight: bold;
     font-size: 100px;
     margin: 0;
