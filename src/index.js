@@ -1,5 +1,4 @@
-const executedText = document.createTextNode('SCRIPT EXECUTED');
-document.body.appendChild(executedText);
+document.body.appendChild(document.createTextNode('SCRIPT EXECUTING'));
 
 const content = `
 <style>
@@ -11,6 +10,8 @@ const content = `
 <p>THIS SHOULD RENDER</p>
 `;
 
+document.body.appendChild(document.createTextNode('CONTNENT CREATED'));
+
 class MyApp extends HTMLElement {
   connectedCallback() {
     this.attachShadow({ mode: 'open' });
@@ -18,4 +19,8 @@ class MyApp extends HTMLElement {
   }
 }
 
+document.body.appendChild(document.createTextNode('CLASS DEFINED'));
+
 customElements.define('my-app', MyApp);
+
+document.body.appendChild(document.createTextNode('CUSTOM ELEMENT DEFINED'));
