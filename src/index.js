@@ -1,10 +1,5 @@
 const content = `
 <style>
-  :host {
-    display: inline-block;
-    background: black;
-    color: white;
-  }
   p {
     font-weight: bold;
     font-size: 100px;
