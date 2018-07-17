@@ -1,13 +1,25 @@
+<!-- Load Babel Polyfills on all browsers that do not support modules (IE11, GoogleBot) -->
+<script nomodule src="./babel-polyfill/dist/polyfill.js"></script>
+
+<!--
+  Load the webcomponent polyfills for ShadowDOM, Custom Elements, and Platform Polyfills
+  (No-op on browsers that already have support)
+-->
+<script src="./@webcomponents/webcomponentsjs/bundles/webcomponents-sd-ce.js"></script>
+
+<!-- Load the module version of the app (bundled or unbundled) -->
+<script type="module" src="./index.js"></script>
+
+<!-- Load the ES5 compiled and bundled version of the app on browsers that do not support modules (IE11, GoogleBot) -->
+<script nomodule src="./index.es5.js"></script>
+
+<!-- Minimal App example -->
+<style>
+  p {
+    font-weight: bold;
+    font-size: 100px;
+  }
+</style>
 <my-app>
   <p>THIS SHOULD NOT RENDER</p>
 </my-app>
-
-<span id="browser-sync-binding"></span>
-
-<script nomodule src="./babel-polyfill/dist/polyfill.js"></script>
-
-<script src="./@webcomponents/webcomponentsjs/bundles/webcomponents-sd-ce-pf.js"></script>
-
-<script type="module" src="./index.js"></script>
-
-<script nomodule src="./index.es5.js"></script>

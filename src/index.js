@@ -1,7 +1,10 @@
-document.body.appendChild(document.createTextNode('SCRIPT EXECUTING'));
-
 const content = `
 <style>
+  :host {
+    display: inline-block;
+    background: black;
+    color: white;
+  }
   p {
     font-weight: bold;
     font-size: 100px;
@@ -10,8 +13,6 @@ const content = `
 <p>THIS SHOULD RENDER</p>
 `;
 
-document.body.appendChild(document.createTextNode('CONTNENT CREATED'));
-
 class MyApp extends HTMLElement {
   connectedCallback() {
     this.attachShadow({ mode: 'open' });
@@ -19,8 +20,4 @@ class MyApp extends HTMLElement {
   }
 }
 
-document.body.appendChild(document.createTextNode('CLASS DEFINED'));
-
 customElements.define('my-app', MyApp);
-
-document.body.appendChild(document.createTextNode('CUSTOM ELEMENT DEFINED'));
