@@ -3,6 +3,7 @@ const content = `
   p {
     font-weight: bold;
     font-size: 100px;
+    margin: 0;
   }
 </style>
 <p>THIS SHOULD RENDER</p>
