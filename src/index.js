@@ -1,3 +1,6 @@
+const executedText = document.createTextNode("SCRIPT EXECUTED");
+document.body.appendChild(executedText);
+
 const content = `
 <style>
   p {
@@ -17,3 +20,4 @@ class MyApp extends HTMLElement {
 }
 
 customElements.define('my-app', MyApp);
+
