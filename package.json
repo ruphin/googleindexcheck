@@ -5,24 +5,21 @@
   "repository": "git@github.com:ruphin/googlesearchtest.git",
   "author": "Goffert van Gool",
   "license": "MIT",
+  "type": "module",
   "scripts": {
-    "build": "cp src/*.js ./ && rollup -c",
-    "dev": "browser-sync start --config browsersync.config.js",
-    "test": "echo 'No tests!'"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run --passWithNoTests",
+    "production": "npm run build && docker build -t ruphin/googleindexcheck ."
   },
   "dependencies": {
-    "babel-polyfill": "^6.26.0",
     "@webcomponents/webcomponentsjs": "^2.0.2"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-plugin-external-helpers": "^6.22.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.7.0",
-    "browser-sync": "^2.24.4",
-    "np": "^3.0.4",
-    "rollup": "^0.58.2",
-    "rollup-plugin-babel": "^3.0.4",
-    "rollup-plugin-uglify": "^3.0.0"
+    "@vitejs/plugin-legacy": "^8.2.3",
+    "terser": "^5.51.2",
+    "vite": "^8.3.3",
+    "vitest": "^5.0.3"
   }
 }

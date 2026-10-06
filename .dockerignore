@@ -1,3 +1,2 @@
-node_modules
-!node_modules/babel-polyfill
-!node_modules/@webcomponents/webcomponentsjs
+*
+!dist
